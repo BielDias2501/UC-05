@@ -21,3 +21,26 @@ GET http://localhost:3000/produtos/1
 Content-Type: application/json
 
 ###
+
+### PUT - Editar Produto
+PUT http://localhost:3000/produtos/1
+Content-Type: application/json
+
+{
+    "novoNome": "RTX 3090 16gb",
+    "novoPreco": 5500
+}
+
+###
+
+### DELETE - DELETAR PRODUTO
+DELETE http://localhost:3000/produtos/1
+Content-Type: application/json
+
+###
+
+###DELETE TODOS OS PRODUTOS
+DELETE http://localhost:3000/produtos
+Content-Type: application/json
+
+###

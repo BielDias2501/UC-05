@@ -97,3 +97,13 @@ app.get('/produtos/:id', (requisicao,resposta) => {
 app.listen(port, () => {
   console.log(`Servidor rodando em http://localhost:${port}`);
 });
+
+//DELETAR TUDO
+app.delete('/produtos', (requisicao,resposta) => {
+  try {
+    bancoDados.length = 0
+    resposta.status(200).json({mensagem:"Todos os dados excluídos com sucesso"})
+  } catch (error) {
+    resposta.status(500).json({mensagem:"Erro ao deletar todos os produtos", erro: error.message})
+  }
+})
